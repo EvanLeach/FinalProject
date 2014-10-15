@@ -1,0 +1,25 @@
+html {
+	height: 100%;
+}
+
+body {
+	color: white;
+}
+
+.skyNight {
+	background: linear-gradient(to top, #214366, #12151c) no-repeat;
+}
+
+
+.skyDawn {
+	background: linear-gradient(to top, #d0946f, #873b55, #182c44);
+}
+
+.skyDay {
+	background: linear-gradient(to top, #74aeb0, #2e769e, #184870);
+}
+
+.skyMorning {
+	background: linear-gradient(to top, #dcbe82, #bb6b46, #7c3a46);
+}
+

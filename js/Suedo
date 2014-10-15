@@ -1,0 +1,50 @@
+Forecast.io: https://developer.forecast.io/docs/v2#time_call
+
+
+
+get user's location
+input location in weather api
+call weather api
+	successfull : parse json
+	error : show flags
+
+	load current conditions with 
+
+
+get user's input
+set value to day of the week
+
+
+// Daylight
+	get current time to set default
+	Compare the difference between sunrise / sunset
+	Create a night state
+		If morning- set morning background color + sun position
+		If afternoon-
+		If evening-
+		If night-
+			Background gradients: https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient
+								  http://www.hongkiat.com/blog/css-filter/
+			Change sun position: http://dabblet.com/gist/1615901 , http://lea.verou.me/2012/02/moving-an-element-along-a-circle/
+								 http://lists.w3.org/Archives/Public/www-style/2012Feb/0294.html
+								 http://codepen.io/juliangarnier/pen/idhuG
+
+// Conditions
+	clear-day
+	clear-night
+	rain
+	snow
+	sleet
+	wind
+	fog
+	cloudy
+	partly-cloudy-day
+	partly-cloudy-night
+
+			cloud animations: http://jqueryplugin.net/12-moving-cloud-background-animation-using-css-jquery/
+							  http://codepen.io/montanaflynn/pen/orxwK/
+							  http://www.clicktorelease.com/code/css3dclouds/
+
+// Wind
+	windSpeed
+	windBearing
