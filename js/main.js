@@ -28,11 +28,8 @@ jQuery(document).ready(function($) {
 // Break out the hourly times
 
     for (i = 0; i < hourArry.length; i++) { 
-      if(hourArry[i].time === time) {
-        console.log(hourArry[i].apparentTemperature)
-      }
+        console.log(hourArry[i].time)
     }
-
 
       });
     }
@@ -49,8 +46,10 @@ function setSlider() {
       $( "#amount" ).val( ui.value );
       time = $( "#slider" ).slider( "value" );
       setDaylight();
+      returnWeatherFor();
         }
       });
+      //change time value displayed
       $( "#amount" ).val( $( "#slider" ).slider( "value" ) );
 }
 
@@ -94,19 +93,19 @@ function setStartTime() {
 
 
 //defining variables
-  var apiKey = '6e17054274f48bf8a4b5c9c384c9f717';
-  var url = 'https://api.forecast.io/forecast/';
-  var lati;
-  var longi;
-  var data;
-  var city;
-  var values;
-  var weekArry;
-  var hourArry;
-  var today;
-  var time;
-  var currently;
-  var startTime;
+  var apiKey = '6e17054274f48bf8a4b5c9c384c9f717',
+      url = 'https://api.forecast.io/forecast/',
+      lati,
+      longi,
+      data,
+      city,
+      values,
+      weekArry,
+      hourArry,
+      today,
+      time,
+      startTime,
+      currentHour;
 
 
 
@@ -114,6 +113,18 @@ function setStartTime() {
   var b = $(this).val();
   today = weekArry[b];
   $('#tempReading').html( "day " + b);
-  console.log(today);
     // $('#slide-down section').hide();
 });
+
+
+function returnWeatherFor() {
+  $.each(hourArry, function(key, value){
+    if(value.time > $( "#amount" ).val()){ 
+        console.log(value.time);
+        currentHour = key - 1;
+        console.log('time:', currentHour);
+        return false;
+      }
+  });
+}
+
